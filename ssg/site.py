@@ -22,12 +22,12 @@ class Site:
 
     def load_parser(self, extension):
         for parser in self.parsers:
-            if valid_extension(extension):
+            if ssg.parsers.Parser.valid_extension(extension):
                 return parser
 
     def run_parser(self, path):
         parser = self.load_parser(path.suffix)
-        if parser != None:
+        if parser is not None:
             parser.parse(path, parser.path.source, parser.path.dest)
         else:
             print("Not Implemented")
