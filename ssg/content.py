@@ -28,20 +28,20 @@ class Content(Mapping):
     def type(self, val):
         type = self.data["type"]
 
-    def __getitem__(self, key):
-        return self.data[key]
+        def __getitem__(self, key):
+            return self.data[key]
 
-    def __iter__(self):
-        # Self.data interator method
+        def __iter__(self):
+            # Self.data interator method
 
-    def __len__(self):
-        return len(self.data)
+        def __len__(self):
+            return len(self.data)
 
-    def __repr__(self):
-        data = {}
-        for key, value in self.data.items():
-            if key != "content":
-                data[key] = value
-        return str(data)
+        def __repr__(self):
+            data = {}
+            for key, value in self.data.items():
+                if key != "content":
+                    data[key] = value
+            return str(data)
 
     
