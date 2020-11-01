@@ -2,9 +2,9 @@ from typing import List
 from pathlib import Path
 import shutil
 import sys
-from publish_parts import docutils.core
+from docutils.core import publish_parts
 from markdown import markdown
-from Content import ssg.content
+from ssg.content import Content
 
 class Parser:
 
